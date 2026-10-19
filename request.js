@@ -10,5 +10,5 @@ http.createServer((req, resp) =>{
     }else{
         resp.write("<h1>Other Page</h1></br>")
     }
-    resp.end("Hello");
+    resp.end();
 }).listen(5000)
