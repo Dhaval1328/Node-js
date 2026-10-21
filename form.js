@@ -1,8 +1,13 @@
 const http= require('http');
+const fs = require('fs');
 
 http.createServer((req, resp)=>{
-
+    fs.readFile('html/form.html','utf-8',(error, data) =>{
+        resp.writeHead
+    })
 }).listen(3200)
+
+
 
 // const http = require('http');
 
