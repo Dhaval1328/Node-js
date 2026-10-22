@@ -10,7 +10,7 @@ const userData=[
 {
     name:'Dhaval1',
     age:21,
-    email:'demo1@gmail.com'
+    email:' demo1@gmail.com '
 },
 {
     name:'Dhaval2',
