@@ -3,7 +3,19 @@ const fs = require('fs');
 
 http.createServer((req, resp)=>{
     fs.readFile('html/form.html','utf-8',(error, data) =>{
-        resp.writeHead
+        if(error){
+            resp.writeHead(500,{"content-type":'text/plan'})
+            resp.end('Internal server error')
+
+            return ;
+        }
+        if(req.url == '/'){
+            resp.writeHead(200,{"content-type":'text/html'})
+            resp.write(data);
+        }else if(req.url== '/submit'){
+            resp.write('<h1>Data Submited</h1>')
+        }
+        resp.end()
     })
 }).listen(3200)
 
