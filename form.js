@@ -10,7 +10,7 @@ http.createServer((req, resp)=>{
             return ;
         }
         if(req.url == '/'){
-            resp.writeHead(200,{"content-type":'text/html'})
+            resp.writeHead(200,{" content-type":'text/html' })
             resp.write(data);
         }else if(req.url== '/submit'){
             resp.write('<h1>Data Submited</h1>')
