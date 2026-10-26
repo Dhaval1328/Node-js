@@ -10,9 +10,17 @@ http.createServer((req, resp)=>{
             return ;
         }
         if(req.url == '/'){
-            resp.writeHead(200,{" content-type":'text/html' })
+            resp.writeHead(200,{"content-type":'text/html' })
             resp.write(data);
         }else if(req.url== '/submit'){
+            let dataBody = [];
+            req.on('data',(chunk)=>{
+                dataBody.push(chunk);
+            });
+            req.on('end',(chunk)=>{
+                let rawData = Buffer.concat(dataBody).toString();
+                console.log(rawData);
+            });
             resp.write('<h1>Data Submited</h1>')
         }
         resp.end()
