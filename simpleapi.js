@@ -15,7 +15,7 @@ const userData=[
 {
     name:'Dhaval2',
     age:22,
-    email:'demo2@gmail.com'
+    email:'demo2@gmail.com '
 }
 ]
 http.createServer((req, resp)=>{
