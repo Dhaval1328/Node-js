@@ -1,13 +1,29 @@
-function userDatasubmit(req,resp){
-    let dataBody = [];
-            req.on('data',(chunk)=>{
-                dataBody.push(chunk);
-            });
+const queryString = require('querystring');
 
+function userdatasubmit(req, resp) {
+    let databody = [];
 
-    req.on('end',() => {
-        let rawData = Buffer.concat(dataBody).toString
-    })
-        resp.write(`<h1>You Data Get</h1>`);
+    req.on("data", (chunk) => {
+        databody.push(chunk);
+    });
+
+    req.on("end", () => {
+        let rowdata = Buffer.concat(databody).toString();
+
+        let readabledata = queryString.parse(rowdata);
+
+        let datastring = "My name is " + readabledata.name +
+                         " and Email is " + readabledata.email;
+
+        console.log(datastring);
+
+        resp.write(`
+            <h1>You can get data from user from here</h1>
+            <p>${datastring}</p>
+        `);
+
+        resp.end();
+    });
 }
-module.exports= userDatasubmit;
+
+module.exports = userdatasubmit;
