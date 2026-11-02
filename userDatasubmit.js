@@ -12,13 +12,12 @@ function userdatasubmit(req, resp) {
 
         let readabledata = queryString.parse(rowdata);
 
-        let datastring = "My name is " + readabledata.name +
-                         " and Email is " + readabledata.email;
+        let datastring = "My name is " + readabledata.name + " and Email is " + readabledata.email;
 
         console.log(datastring);
 
         resp.write(`
-            <h1>You can get data from user from here</h1>
+            <h1> You can get data from user from here </h1>
             <p>${datastring}</p>
         `);
 
