@@ -16,5 +16,5 @@ http.createServer((req, resp) => {
     }
 
 }).listen(3200, () => {
-    console.log("Server running at http://localhost:3200");
+    console.log("Server running at http://localhost:3200 Click here to open");
 });
