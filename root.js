@@ -12,7 +12,7 @@ http.createServer((req, resp) => {
         userDatasubmit(req, resp);
 
     } else {
-        resp.end("<h1> 404 Page Not Found </h1>");
+        resp.end("<h1>404 Page Not Found</h1>");
     }
 
 }).listen(3200, () => {
