@@ -10,7 +10,6 @@ let CollectFooterData=fs.readFileSync("html/Footer.html", "utf-8");
 
 
 
-
 let file="/home"
 if(req.url!='/')
 {
