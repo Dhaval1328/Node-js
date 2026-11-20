@@ -5,7 +5,7 @@ http
   .createServer((req, resp) => {
 
 // Header code 
-let CollectHeaderData=fs.readFileSync("html/Header.html", "utf-8");
+let CollectHeaderData=fs.readFileSync("html/Header.html", "utf-8");021
 let CollectFooterData=fs.readFileSync("html/Footer.html", "utf-8");
 
 
@@ -34,7 +34,6 @@ if(req.url!='/')
           resp.end("css not found  error");
           return false;
         }
-        
           resp.writeHead(200, { "content-type": "text/css" });
 
         resp.end(data);
