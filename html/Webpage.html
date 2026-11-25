@@ -1,14 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Page</title>
-</head>
-<body>
+
+    <link rel="stylesheet" href="style1.css" />
+
+    <style>
+      #a1 {
+        text-align: left;
+      }
+
+      .a2 {
+        color: red;
+      }
+
+      .b1 {
+        text-align: left;
+      }
+    </style>
+  </head>
+
+  <body style="text-align: center">
     <h1>Fill The Form</h1>
+
     <form>
-        <input type="text" placeholder="Enter Your Full Name" required/>
+      <div style="text-align: left">
+        <input type="text" placeholder="Enter Your Full Name" required />
+      </div>
+
+      <br />
+
+      <div class="b1 a2">
+        <h1>Enter Your Details</h1>
+        <input type="text" class="a2" placeholder="Enter Your Full Name" />
+      </div>
+
+      <br />
+
+      <div id="a1">
+        <input type="password" placeholder="Enter Your Password" required />
+      </div>
+      <br />
+      <button type="submit">Submit</button>
     </form>
-</body>
+  </body>
 </html>
